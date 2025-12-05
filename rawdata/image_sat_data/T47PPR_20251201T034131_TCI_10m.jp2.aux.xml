@@ -1,0 +1,105 @@
+<PAMDataset>
+  <Metadata>
+    <MDI key="COMPRESSION_RATE_TARGET">2</MDI>
+    <MDI key="COLORSPACE">RGB</MDI>
+  </Metadata>
+  <Metadata domain="JPEG2000">
+    <MDI key="PROFILE">2</MDI>
+    <MDI key="TILES_X">11</MDI>
+    <MDI key="TILES_Y">11</MDI>
+    <MDI key="TILE_WIDTH">1024</MDI>
+    <MDI key="TILE_HEIGHT">1024</MDI>
+    <MDI key="PRECINCT_SIZE_X">256,256,256,256</MDI>
+    <MDI key="PRECINCT_SIZE_Y">256,256,256,256</MDI>
+    <MDI key="CODE_BLOCK_SIZE_X">64</MDI>
+    <MDI key="CODE_BLOCK_SIZE_Y">64</MDI>
+    <MDI key="PRECISION">8,8,8</MDI>
+    <MDI key="RESOLUTION_LEVELS">4</MDI>
+    <MDI key="QUALITY_LAYERS">1</MDI>
+    <MDI key="PROGRESSION_ORDER">LRCP</MDI>
+    <MDI key="TRANSFORMATION_TYPE">5x3</MDI>
+    <MDI key="USE_SOP">FALSE</MDI>
+    <MDI key="USE_EPH">FALSE</MDI>
+    <MDI key="GML_JP2_DATA">TRUE</MDI>
+  </Metadata>
+  <Metadata domain="xml:gml.root-instance" format="xml">
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <gml:FeatureCollection xmlns:gml="http://www.opengis.net/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengeospatial.net/gml http://schemas.opengis.net/gml/3.1.1/profiles/gmlJP2Profile/1.0.0/gmlJP2Profile.xsd">
+      <gml:boundedBy>
+        <gml:Null>withheld</gml:Null>
+      </gml:boundedBy>
+      <gml:featureMember>
+        <gml:FeatureCollection>
+          <gml:featureMember>
+            <gml:RectifiedGridCoverage dimension="2" gml:id="RGC0001">
+              <gml:rectifiedGridDomain>
+                <gml:RectifiedGrid dimension="2">
+                  <gml:limits>
+                    <gml:GridEnvelope>
+                      <gml:low>1 1</gml:low>
+                      <gml:high>10980 10980</gml:high>
+                    </gml:GridEnvelope>
+                  </gml:limits>
+                  <gml:axisName>x</gml:axisName>
+                  <gml:axisName>y</gml:axisName>
+                  <gml:origin>
+                    <gml:Point gml:id="P0001" srsName="urn:ogc:def:crs:EPSG::32647">
+                      <gml:pos>600005 1600015</gml:pos>
+                    </gml:Point>
+                  </gml:origin>
+                  <gml:offsetVector srsName="urn:ogc:def:crs:EPSG::32647">10 0</gml:offsetVector>
+                  <gml:offsetVector srsName="urn:ogc:def:crs:EPSG::32647">0 -10</gml:offsetVector>
+                </gml:RectifiedGrid>
+              </gml:rectifiedGridDomain>
+              <gml:rangeSet>
+                <gml:File>
+                  <gml:rangeParameters>
+                    <gml:QuantityExtent uom="urn:ogc:def:crs:EPSG::32647">inapplicable inapplicable</gml:QuantityExtent>
+                  </gml:rangeParameters>
+                  <gml:fileName>gmljp2://codestream/0</gml:fileName>
+                  <gml:fileStructure>Record Interleaved</gml:fileStructure>
+                </gml:File>
+              </gml:rangeSet>
+              <gml:coverageFunction>
+                <gml:GridFunction>
+                  <gml:sequenceRule order="+x-y">Linear</gml:sequenceRule>
+                  <gml:startPoint>1 10980</gml:startPoint>
+                </gml:GridFunction>
+              </gml:coverageFunction>
+            </gml:RectifiedGridCoverage>
+          </gml:featureMember>
+        </gml:FeatureCollection>
+      </gml:featureMember>
+    </gml:FeatureCollection>
+  </Metadata>
+  <PAMRasterBand band="1">
+    <Description>Red</Description>
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_MAXIMUM">255</MDI>
+      <MDI key="STATISTICS_MEAN">80.266577750419</MDI>
+      <MDI key="STATISTICS_STDDEV">46.255948489304</MDI>
+    </Metadata>
+  </PAMRasterBand>
+  <PAMRasterBand band="2">
+    <Description>Green</Description>
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_MAXIMUM">255</MDI>
+      <MDI key="STATISTICS_MEAN">81.857152628159</MDI>
+      <MDI key="STATISTICS_STDDEV">37.256900245915</MDI>
+    </Metadata>
+  </PAMRasterBand>
+  <PAMRasterBand band="3">
+    <Description>Blue</Description>
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_MAXIMUM">255</MDI>
+      <MDI key="STATISTICS_MEAN">57.90609076297</MDI>
+      <MDI key="STATISTICS_STDDEV">37.155364644849</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>
