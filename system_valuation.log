@@ -1,0 +1,148 @@
+2025-12-20 16:52:18,924 - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2025-12-20 16:52:18,954 - INFO - Starting to load models...
+2025-12-20 16:52:19,600 - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2025-12-20 16:52:19,602 - INFO - \u2705 All models loaded successfully.
+2025-12-20 16:52:19,623 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-20 16:52:19,624 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-20 16:52:19,637 - INFO -  * Restarting with watchdog (windowsapi)
+2025-12-20 16:52:24,029 - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2025-12-20 16:52:24,041 - INFO - Starting to load models...
+2025-12-20 16:52:24,660 - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2025-12-20 16:52:24,661 - INFO - \u2705 All models loaded successfully.
+2025-12-20 16:52:24,669 - WARNING -  * Debugger is active!
+2025-12-20 16:52:24,672 - INFO -  * Debugger PIN: 600-785-089
+2025-12-20 16:57:40,732 - INFO -  * Detected change in 'c:\\Users\\Asus\\Desktop\\project\\final\\Flask\\app.py', reloading
+2025-12-20 16:57:42,274 - INFO -  * Restarting with watchdog (windowsapi)
+2025-12-20 16:57:46,742 - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2025-12-20 16:57:46,755 - INFO - Starting to load models...
+2025-12-20 16:57:47,365 - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2025-12-20 16:57:47,368 - INFO - \u2705 All models loaded successfully.
+2025-12-20 16:57:47,375 - WARNING -  * Debugger is active!
+2025-12-20 16:57:47,378 - INFO -  * Debugger PIN: 600-785-089
+2025-12-20 17:00:21,742 - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2025-12-20 17:00:21,755 - INFO - Starting to load models...
+2025-12-20 17:00:22,381 - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2025-12-20 17:00:22,383 - INFO - \u2705 All models loaded successfully.
+2025-12-20 17:00:22,398 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-20 17:00:22,398 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-20 17:03:11,416 - INFO - Starting to load models...
+2025-12-20 17:03:12,324 - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2025-12-20 17:03:12,336 - INFO - \u2705 All models loaded successfully.
+2025-12-20 17:03:12,350 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-20 17:03:12,350 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-20 17:03:12,357 - INFO -  * Restarting with watchdog (windowsapi)
+2025-12-20 17:03:15,881 - INFO - Starting to load models...
+2025-12-20 17:03:16,780 - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2025-12-20 17:03:16,790 - INFO - \u2705 All models loaded successfully.
+2025-12-20 17:03:16,797 - WARNING -  * Debugger is active!
+2025-12-20 17:03:16,802 - INFO -  * Debugger PIN: 600-785-089
+2025-12-20 17:22:21,223 - INFO - Starting to load models...
+2025-12-20 17:22:23,429 - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2025-12-20 17:22:23,594 - INFO - \u2705 All models loaded successfully.
+2025-12-20 17:22:23,758 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-20 17:22:23,758 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-20 17:22:23,842 - INFO -  * Restarting with watchdog (windowsapi)
+2025-12-20 17:22:27,621 - INFO - Starting to load models...
+2025-12-20 17:22:28,592 - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2025-12-20 17:22:28,604 - INFO - \u2705 All models loaded successfully.
+2025-12-20 17:22:28,613 - WARNING -  * Debugger is active!
+2025-12-20 17:22:28,616 - INFO -  * Debugger PIN: 600-785-089
+2025-12-20 17:30:36,694 - INFO -  * Detected change in 'c:\\Users\\Asus\\Desktop\\project\\final\\Flask\\app_Production.py', reloading
+2025-12-20 17:30:36,694 - INFO -  * Detected change in 'c:\\Users\\Asus\\Desktop\\project\\final\\Flask\\app_Production.py', reloading
+2025-12-20 17:30:37,660 - INFO -  * Restarting with watchdog (windowsapi)
+2025-12-20 17:31:19,889 - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2025-12-20 17:31:21,067 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.12:5000
+2025-12-20 17:31:21,068 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-21 02:40:14,217 - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2025-12-21 02:40:15,844 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.12:5000
+2025-12-21 02:40:15,844 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-21 02:41:00,243 - INFO - 127.0.0.1 - - [21/Dec/2025 02:41:00] "GET / HTTP/1.1" 200 -
+2025-12-21 02:41:00,732 - INFO - 127.0.0.1 - - [21/Dec/2025 02:41:00] "[33mGET /static/shp/bangkok.zip HTTP/1.1[0m" 404 -
+2025-12-21 02:41:00,820 - INFO - 127.0.0.1 - - [21/Dec/2025 02:41:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-21 02:44:07,180 - INFO - 127.0.0.1 - - [21/Dec/2025 02:44:07] "GET / HTTP/1.1" 200 -
+2025-12-21 02:44:07,353 - INFO - 127.0.0.1 - - [21/Dec/2025 02:44:07] "[33mGET /static/shp/bangkok.zip HTTP/1.1[0m" 404 -
+2025-12-21 02:44:09,061 - INFO - 127.0.0.1 - - [21/Dec/2025 02:44:09] "GET / HTTP/1.1" 200 -
+2025-12-21 02:44:09,118 - INFO - 127.0.0.1 - - [21/Dec/2025 02:44:09] "[33mGET /static/shp/bangkok.zip HTTP/1.1[0m" 404 -
+2025-12-21 02:44:35,673 - INFO - Success: 13.67999391584792,100.51948547602626 -> 2123843.2022539224
+2025-12-21 02:44:35,673 - INFO - 127.0.0.1 - - [21/Dec/2025 02:44:35] "POST /predict HTTP/1.1" 200 -
+2025-12-21 02:44:35,703 - INFO - 127.0.0.1 - - [21/Dec/2025 02:44:35] "GET /result?price=2,123,843.20&poi=undefined HTTP/1.1" 200 -
+2025-12-21 02:44:38,616 - INFO - 127.0.0.1 - - [21/Dec/2025 02:44:38] "GET / HTTP/1.1" 200 -
+2025-12-21 02:44:38,695 - INFO - 127.0.0.1 - - [21/Dec/2025 02:44:38] "[33mGET /static/shp/bangkok.zip HTTP/1.1[0m" 404 -
+2025-12-21 14:25:47,448 - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2025-12-21 14:25:48,719 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.12:5000
+2025-12-21 14:25:48,720 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-21 14:26:10,849 - INFO - 127.0.0.1 - - [21/Dec/2025 14:26:10] "GET / HTTP/1.1" 200 -
+2025-12-21 14:26:11,062 - INFO - 127.0.0.1 - - [21/Dec/2025 14:26:11] "[33mGET /static/shp/bangkok.zip HTTP/1.1[0m" 404 -
+2025-12-21 14:26:11,148 - INFO - 127.0.0.1 - - [21/Dec/2025 14:26:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-21 14:27:04,767 - INFO - 127.0.0.1 - - [21/Dec/2025 14:27:04] "GET / HTTP/1.1" 200 -
+2025-12-21 14:27:04,838 - INFO - 127.0.0.1 - - [21/Dec/2025 14:27:04] "[33mGET /static/shp/bangkok.zip HTTP/1.1[0m" 404 -
+2025-12-21 14:27:39,775 - INFO - 127.0.0.1 - - [21/Dec/2025 14:27:39] "GET / HTTP/1.1" 200 -
+2025-12-21 14:27:40,121 - INFO - 127.0.0.1 - - [21/Dec/2025 14:27:40] "[33mGET /static/shp/bangkok.zip HTTP/1.1[0m" 404 -
+2025-12-21 19:05:42,526 - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2025-12-21 19:05:45,891 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.12:5000
+2025-12-21 19:05:45,891 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-21 19:06:01,661 - INFO - 127.0.0.1 - - [21/Dec/2025 19:06:01] "GET / HTTP/1.1" 200 -
+2025-12-21 19:06:02,193 - INFO - 127.0.0.1 - - [21/Dec/2025 19:06:02] "[33mGET /static/shp/bangkok.zip HTTP/1.1[0m" 404 -
+2025-12-21 19:12:05,285 - INFO - Success: 13.720929353815102,100.57592465656526 -> 6445763.5431680055
+2025-12-21 19:12:05,287 - INFO - 127.0.0.1 - - [21/Dec/2025 19:12:05] "POST /predict HTTP/1.1" 200 -
+2025-12-21 19:12:05,458 - INFO - 127.0.0.1 - - [21/Dec/2025 19:12:05] "GET /result?price=6,445,763.54&poi=undefined HTTP/1.1" 200 -
+2025-12-21 19:13:06,098 - INFO - 127.0.0.1 - - [21/Dec/2025 19:13:06] "GET / HTTP/1.1" 200 -
+2025-12-21 19:13:06,377 - INFO - 127.0.0.1 - - [21/Dec/2025 19:13:06] "[33mGET /static/shp/bangkok.zip HTTP/1.1[0m" 404 -
+2025-12-21 19:19:42,899 - INFO - Success: 13.741139328195558,100.58771296729674 -> 8028391.171004696
+2025-12-21 19:19:42,929 - INFO - 127.0.0.1 - - [21/Dec/2025 19:19:42] "POST /predict HTTP/1.1" 200 -
+2025-12-21 19:19:43,024 - INFO - 127.0.0.1 - - [21/Dec/2025 19:19:43] "GET /result?price=8,028,391.17&poi=undefined HTTP/1.1" 200 -
+2025-12-21 19:21:26,082 - INFO - 127.0.0.1 - - [21/Dec/2025 19:21:26] "GET / HTTP/1.1" 200 -
+2025-12-21 19:21:26,562 - INFO - 127.0.0.1 - - [21/Dec/2025 19:21:26] "[33mGET /static/shp/bangkok.zip HTTP/1.1[0m" 404 -
+2025-12-21 19:24:16,350 - INFO - Success: 13.690780885713762,100.53478363459944 -> 3667811.8709104853
+2025-12-21 19:24:16,358 - INFO - 127.0.0.1 - - [21/Dec/2025 19:24:16] "POST /predict HTTP/1.1" 200 -
+2025-12-21 19:24:16,389 - INFO - 127.0.0.1 - - [21/Dec/2025 19:24:16] "GET /result?price=3,667,811.87&poi=undefined HTTP/1.1" 200 -
+2025-12-21 19:25:29,773 - INFO - 127.0.0.1 - - [21/Dec/2025 19:25:29] "GET / HTTP/1.1" 200 -
+2025-12-21 19:25:29,949 - INFO - 127.0.0.1 - - [21/Dec/2025 19:25:29] "[33mGET /static/shp/bangkok.zip HTTP/1.1[0m" 404 -
+2025-12-21 19:28:26,237 - INFO - Success: 13.78747890010659,100.5729029029543 -> 4465209.825491499
+2025-12-21 19:28:26,241 - INFO - 127.0.0.1 - - [21/Dec/2025 19:28:26] "POST /predict HTTP/1.1" 200 -
+2025-12-21 19:28:26,295 - INFO - 127.0.0.1 - - [21/Dec/2025 19:28:26] "GET /result?price=4,465,209.83&poi=undefined HTTP/1.1" 200 -
+2025-12-21 19:29:11,241 - INFO - 127.0.0.1 - - [21/Dec/2025 19:29:11] "GET / HTTP/1.1" 200 -
+2025-12-21 19:29:11,523 - INFO - 127.0.0.1 - - [21/Dec/2025 19:29:11] "[33mGET /static/shp/bangkok.zip HTTP/1.1[0m" 404 -
+2025-12-21 19:32:57,935 - INFO - Success: 13.682032869729785,100.49382077339283 -> 1878914.5446735332
+2025-12-21 19:32:57,944 - INFO - 127.0.0.1 - - [21/Dec/2025 19:32:57] "POST /predict HTTP/1.1" 200 -
+2025-12-21 19:32:57,989 - INFO - 127.0.0.1 - - [21/Dec/2025 19:32:57] "GET /result?price=1,878,914.54&poi=undefined HTTP/1.1" 200 -
+2025-12-21 19:37:13,713 - INFO - 127.0.0.1 - - [21/Dec/2025 19:37:13] "GET / HTTP/1.1" 200 -
+2025-12-21 19:37:13,986 - INFO - 127.0.0.1 - - [21/Dec/2025 19:37:13] "[33mGET /static/shp/bangkok.zip HTTP/1.1[0m" 404 -
+2025-12-21 20:05:41,164 - INFO - Success: 13.720958545410571,100.57591795921326 -> 5889671.252935643
+2025-12-21 20:05:41,172 - INFO - 127.0.0.1 - - [21/Dec/2025 20:05:41] "POST /predict HTTP/1.1" 200 -
+2025-12-21 20:05:41,202 - INFO - 127.0.0.1 - - [21/Dec/2025 20:05:41] "GET /result?price=5,889,671.25&poi=undefined HTTP/1.1" 200 -
+2025-12-21 20:06:07,465 - INFO - 127.0.0.1 - - [21/Dec/2025 20:06:07] "GET / HTTP/1.1" 200 -
+2025-12-21 20:06:07,981 - INFO - 127.0.0.1 - - [21/Dec/2025 20:06:07] "[33mGET /static/shp/bangkok.zip HTTP/1.1[0m" 404 -
+2025-12-21 20:06:31,023 - INFO - 127.0.0.1 - - [21/Dec/2025 20:06:31] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+2025-12-21 20:14:50,264 - WARNING - No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
+2025-12-21 20:14:51,837 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.12:5000
+2025-12-21 20:14:51,837 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-21 20:14:52,253 - INFO - 127.0.0.1 - - [21/Dec/2025 20:14:52] "GET / HTTP/1.1" 200 -
+2025-12-21 20:14:52,826 - INFO - 127.0.0.1 - - [21/Dec/2025 20:14:52] "[33mGET /static/shp/bangkok.zip HTTP/1.1[0m" 404 -
+2025-12-21 20:15:17,670 - INFO - 127.0.0.1 - - [21/Dec/2025 20:15:17] "GET / HTTP/1.1" 200 -
+2025-12-21 20:15:17,786 - INFO - 127.0.0.1 - - [21/Dec/2025 20:15:17] "[33mGET /static/shp/bangkok.zip HTTP/1.1[0m" 404 -
+2025-12-21 20:18:25,067 - INFO - Success: 13.720875164107358,100.57597160339357 -> 5984744.742403971
+2025-12-21 20:18:25,070 - INFO - 127.0.0.1 - - [21/Dec/2025 20:18:25] "POST /predict HTTP/1.1" 200 -
+2025-12-21 20:18:25,107 - INFO - 127.0.0.1 - - [21/Dec/2025 20:18:25] "GET /result?price=5,984,744.74&poi=undefined HTTP/1.1" 200 -
+2025-12-21 20:18:37,902 - INFO - 127.0.0.1 - - [21/Dec/2025 20:18:37] "GET / HTTP/1.1" 200 -
+2025-12-21 20:18:38,155 - INFO - 127.0.0.1 - - [21/Dec/2025 20:18:38] "[33mGET /static/shp/bangkok.zip HTTP/1.1[0m" 404 -
+2025-12-21 20:18:51,333 - INFO - 127.0.0.1 - - [21/Dec/2025 20:18:51] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -

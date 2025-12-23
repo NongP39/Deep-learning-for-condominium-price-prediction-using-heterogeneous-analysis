@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เช็คประราคาซื้อขายคอนโด</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
+    <script src="https://unpkg.com/shpjs@latest/dist/shp.js"></script>
+
+    <style>
+        body { background-color: #f8fafc; font-family: 'Sarabun', sans-serif; }
+        #map { height: 550px; width: 100%; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 2px solid #fff; }
+        .form-container { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .section-title { border-left: 5px solid #0d6efd; padding-left: 12px; margin: 20px 0; font-weight: bold; color: #333; }
+        .amenity-box { background: #f1f5f9; border-radius: 12px; padding: 18px; border: 1px solid #e2e8f0; }
+        .btn-predict { background: linear-gradient(45deg, #0d6efd, #00c6ff); border: none; font-weight: bold; padding: 12px; color: white; transition: 0.3s; }
+        .btn-predict:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(13,110,253,0.3); color: white; }
+        .sticky-map { position: sticky; top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-6 fw-bold text-primary">Condo Price Prediction 🚀</h1>
+        <p class="text-muted">ระบบประเมินราคาคอนโดด้วย Multimodal AI และภาพถ่ายดาวเทียม</p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-lg-7">
+            <div class="sticky-map">
+                <div id="map"></div>
+                <div class="mt-3 p-3 bg-white rounded shadow-sm border-start border-primary border-4">
+                    <small class="text-muted d-block">📍 <b>คำแนะนำ:</b></small>
+                    <small class="text-secondary">คลิกบนพื้นที่สีน้ำเงินเพื่อปักหมุด หากอยู่นอกเขตกรุงเทพฯ ระบบจะแจ้งเตือน</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="form-container">
+                <form id="predictForm">
+                    <h5 class="section-title mt-0">ทำเลที่ตั้ง</h5>
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">เขต (District)</label>
+                        <select id="district" class="form-select shadow-sm" required>
+                            <option value="" disabled selected>--- กรุณาเลือกเขต ---</option>
+                            <option value="Bang Bon">Bang Bon</option> <option value="Bang Kapi">Bang Kapi</option>
+                            <option value="Bang Khae">Bang Khae</option> <option value="Bang Khen">Bang Khen</option>
+                            <option value="Bang Kho Laem">Bang Kho Laem</option> <option value="Bang Khun Thian">Bang Khun Thian</option>
+                            <option value="Bang Na">Bang Na</option> <option value="Bang Phlat">Bang Phlat</option>
+                            <option value="Bang Rak">Bang Rak</option> <option value="Bang Sue">Bang Sue</option>
+                            <option value="Bangkok Noi">Bangkok Noi</option> <option value="Bangkok Yai">Bangkok Yai</option>
+                            <option value="Bueng Kum">Bueng Kum</option> <option value="Chatuchak">Chatuchak</option>
+                            <option value="Chom Thong">Chom Thong</option> <option value="Din Daeng">Din Daeng</option>
+                            <option value="Don Mueang">Don Mueang</option> <option value="Dusit">Dusit</option>
+                            <option value="Huai Khwang">Huai Khwang</option> <option value="Khan Na Yao">Khan Na Yao</option>
+                            <option value="Khlong San">Khlong San</option> <option value="Khlong Toei">Khlong Toei</option>
+                            <option value="Lak Si">Lak Si</option> <option value="Lat Krabang">Lat Krabang</option>
+                            <option value="Lat Phrao">Lat Phrao</option> <option value="Min Buri">Min Buri</option>
+                            <option value="Pathum Wan">Pathum Wan</option> <option value="Phasi Charoen">Phasi Charoen</option>
+                            <option value="Phaya Thai">Phaya Thai</option> <option value="Phra Khanong">Phra Khanong</option>
+                            <option value="Phra Nakhon">Phra Nakhon</option> <option value="Pom Prap Sattru Phai">Pom Prap Sattru Phai</option>
+                            <option value="Prawet">Prawet</option> <option value="Rat Burana">Rat Burana</option>
+                            <option value="Ratchathewi">Ratchathewi</option> <option value="Sai Mai">Sai Mai</option>
+                            <option value="Samphanthawong">Samphanthawong</option> <option value="Saphan Sung">Saphan Sung</option>
+                            <option value="Sathon">Sathon</option> <option value="Suan Luang">Suan Luang</option>
+                            <option value="Taling Chan">Taling Chan</option> <option value="Thon Buri">Thon Buri</option>
+                            <option value="Thung Khru">Thung Khru</option> <option value="Wang Thonglang">Wang Thonglang</option>
+                            <option value="Watthana">Watthana</option> <option value="Yan Nawa">Yan Nawa</option>
+                        </select>
+                    </div>
+
+                    <h5 class="section-title">รายละเอียดคอนโด</h5>
+                    <div class="row g-2">
+                        <div class="col-6 mb-2"><label class="small fw-bold">ห้องนอน</label><input type="number" id="bedrooms" class="form-control" value="1"></div>
+                        <div class="col-6 mb-2"><label class="small fw-bold">ห้องน้ำ</label><input type="number" id="bathrooms" class="form-control" value="1"></div>
+                        <div class="col-12 mb-2"><label class="small fw-bold">พื้นที่ภายใน (ตร.ม.)</label><input type="number" step="0.1" id="internal_area" class="form-control" placeholder="เช่น 35.5" required></div>
+                        <div class="col-4 mb-2"><label class="small fw-bold">ชั้น</label><input type="number" id="floors" class="form-control" value="1"></div>
+                        <div class="col-4 mb-2"><label class="small fw-bold">จำนวนตึก</label><input type="number" id="towers" class="form-control" value="1"></div>
+                        <div class="col-4 mb-2"><label class="small fw-bold">ปีที่สร้าง</label><input type="number" id="year_built" class="form-control" placeholder="2020"></div>
+                    </div>
+
+                    <h5 class="section-title">สิ่งอำนวยความสะดวก</h5>
+                    <div class="amenity-box">
+                        <div class="row g-2">
+                            <div class="col-6 small"><input type="checkbox" id="has_elevator"> ลิฟต์</div>
+                            <div class="col-6 small"><input type="checkbox" id="has_parking"> ที่จอดรถ</div>
+                            <div class="col-6 small"><input type="checkbox" id="has_security"> รปภ. 24 ชม.</div>
+                            <div class="col-6 small"><input type="checkbox" id="has_cctv"> CCTV</div>
+                            <div class="col-6 small"><input type="checkbox" id="has_pool"> สระว่ายน้ำ</div>
+                            <div class="col-6 small"><input type="checkbox" id="has_sauna"> ซาวน่า</div>
+                            <div class="col-6 small"><input type="checkbox" id="has_gym"> ฟิตเนส</div>
+                            <div class="col-6 small"><input type="checkbox" id="has_garden_bbq"> สวน/BBQ</div>
+                            <div class="col-6 small"><input type="checkbox" id="has_playground"> สนามเด็กเล่น</div>
+                            <div class="col-6 small"><input type="checkbox" id="has_shop_on_premise"> ร้านค้า</div>
+                            <div class="col-6 small"><input type="checkbox" id="has_restaurant_on_premise"> ร้านอาหาร</div>
+                            <div class="col-6 small"><input type="checkbox" id="has_wifi"> Wi-Fi</div>
+                        </div>
+                    </div>
+
+                    <h5 class="section-title">ระยะทาง</h5>
+                    <div class="row g-2 mb-4">
+                        <div class="col-6"><label class="small fw-bold">ห่างรถไฟฟ้า (ม.)</label><input type="number" id="city_train_distance" class="form-control shadow-sm" value="500"></div>
+                        <div class="col-6"><label class="small fw-bold">ห่างทางด่วน (ม.)</label><input type="number" id="express_way_distance" class="form-control shadow-sm" value="1000"></div>
+                    </div>
+
+                    <input type="hidden" id="lat"> <input type="hidden" id="lon">
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg btn-predict shadow-sm" id="submitBtn">เริ่มการประเมินราคา</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 1. ตั้งค่าแผนที่ Leaflet
+    var map = L.map('map').setView([13.75, 100.52], 11);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    var marker;
+
+    // 2. โหลดเส้นขอบเขตกรุงเทพฯ จากไฟล์ .zip
+    // วางไฟล์ bangkok_boundary.zip ไว้ที่ static/shp/
+    var shpUrl = "{{ url_for('static', filename='shp/bangkok.zip') }}";
+    shp(shpUrl).then(function(geojson) {
+        L.geoJSON(geojson, {
+            style: { color: "#0d6efd", weight: 2, fillOpacity: 0.1, interactive: false }
+        }).addTo(map);
+    }).catch(function(err) { console.error("Error loading SHP:", err); });
+
+    map.on('click', function(e) {
+        if(marker) map.removeLayer(marker);
+        marker = L.marker(e.latlng).addTo(map);
+        document.getElementById('lat').value = e.latlng.lat;
+        document.getElementById('lon').value = e.latlng.lng;
+    });
+
+    // 3. จัดการการส่งฟอร์มและดัก Error Geofencing
+    document.getElementById('predictForm').onsubmit = async (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('submitBtn');
+        const lat = document.getElementById('lat').value;
+        if(!lat) { alert("กรุณาปักหมุดตำแหน่งคอนโดบนแผนที่ก่อนครับ"); return; }
+
+        btn.disabled = true;
+        btn.innerText = "กำลังคำนวณ GIS & AI...";
+
+        const formData = {
+            district: document.getElementById('district').value,
+            bedrooms: parseInt(document.getElementById('bedrooms').value),
+            bathrooms: parseInt(document.getElementById('bathrooms').value),
+            internal_area: parseFloat(document.getElementById('internal_area').value),
+            floors: parseInt(document.getElementById('floors').value),
+            towers: parseInt(document.getElementById('towers').value),
+            year_built: parseInt(document.getElementById('year_built').value),
+            has_elevator: document.getElementById('has_elevator').checked ? 1 : 0,
+            has_parking: document.getElementById('has_parking').checked ? 1 : 0,
+            has_security: document.getElementById('has_security').checked ? 1 : 0,
+            has_cctv: document.getElementById('has_cctv').checked ? 1 : 0,
+            has_pool: document.getElementById('has_pool').checked ? 1 : 0,
+            has_sauna: document.getElementById('has_sauna').checked ? 1 : 0,
+            has_gym: document.getElementById('has_gym').checked ? 1 : 0,
+            has_garden_bbq: document.getElementById('has_garden_bbq').checked ? 1 : 0,
+            has_playground: document.getElementById('has_playground').checked ? 1 : 0,
+            has_shop_on_premise: document.getElementById('has_shop_on_premise').checked ? 1 : 0,
+            has_restaurant_on_premise: document.getElementById('has_restaurant_on_premise').checked ? 1 : 0,
+            has_wifi: document.getElementById('has_wifi').checked ? 1 : 0,
+            city_train_distance: parseFloat(document.getElementById('city_train_distance').value),
+            express_way_distance: parseFloat(document.getElementById('express_way_distance').value),
+            lat: parseFloat(lat),
+            lon: parseFloat(document.getElementById('lon').value)
+        };
+
+        try {
+            const res = await fetch('/predict', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(formData)
+            });
+
+            const result = await res.json();
+
+            // ✅ ตรวจสอบสถานะ 400 (แจ้งเตือนนอกเขต)
+            if (res.status === 400) {
+                alert("⚠️ " + result.error); 
+                btn.disabled = false;
+                btn.innerText = "เริ่มการประเมินราคา";
+                return;
+            }
+
+            if (res.ok) {
+                const poiData = encodeURIComponent(JSON.stringify(result.poi_details));
+                window.location.href = `/result?price=${result.predicted_price}&poi=${poiData}`;
+            } else {
+                alert("เกิดข้อผิดพลาด: " + result.error);
+                btn.disabled = false;
+                btn.innerText = "เริ่มการประเมินราคา";
+            }
+        } catch (err) {
+            alert("ไม่สามารถเชื่อมต่อเซิร์ฟเวอร์ได้");
+            btn.disabled = false;
+        }
+    };
+</script>
+</body>
+</html>

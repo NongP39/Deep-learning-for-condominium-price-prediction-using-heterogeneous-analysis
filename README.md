@@ -1,25 +1,47 @@
-# Deep learning for condominium price prediction using heterogeneous analysis
-พัฒนา deep learning model เพื่อนำไปใช้ในการประเมินราคาห้องชุดภายในกรุงเทพมหานคร
+# 🏢 Deep Learning for Condominium Price Prediction using Heterogeneous Analysis
 
-การแปลงข้อมูล
-- คอนโด และสิ่งอำนวยความสะดวก (รัศมี 1 KM)
-    ตารางข้อมูลคอนโด จะดูดข้อมูลสิ่งอำนวยความสะดวก ออกมาเป็นจำนวนสถานที่โดยจะแบ่งระยะทางออกเป็น 3 ส่วน
-    1. 0 ถึง 0.4 กิโล
-    2. 0.41 ถึง 0.7 กิโล
-    3. 0.71 กิโล ถึง 1 กิโล
-    และแบ่งทิศทางเป็น 4 ทิศทาง Q1, Q2, Q3 ,Q4
-    (ไม่จำเป็นต้องทำการดึงระยะทางแต่ละ)
+[![Python Version](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)](https://tensorflow.org/)
+[![LightGBM](https://img.shields.io/badge/Model-LightGBM-green)](https://lightgbm.readthedocs.io/)
+[![Framework](https://img.shields.io/badge/Web-Flask-lightgrey)](https://flask.palletsprojects.com/)
 
-    จากการทดสอบพบว่าข้อมูลราคาซื้อขายที่ตั้งไว้นั้นมีความผิดปกติเป็นอย่างมากในบางข้อมูลจึงทำให้ผลลัพธ์ที่ได้ออกมันนั้นมีความคลาดเคลื่อนที่สูงมาก ทางเราจึงตัดสินใจตัดข้อมูลที่มีราคาสูงเกิน 50 ล้านออกไป หรือตัดข้อมูลกลุ่มคอนโดหรูออกไป เพื่อให้ได้ผลลัพธ์ที่ดีที่สุดในกลุ่มคอนโดทั่วไป
+ระบบประเมินราคาคอนโดมิเนียมอัจฉริยะที่ใช้การวิเคราะห์ข้อมูลหลายรูปแบบ (**Multimodal Heterogeneous Analysis**) โดยผสานข้อมูลคุณลักษณะทางกายภาพ ข้อมูลเชิงพื้นที่ (POI) และฟีเจอร์ที่สกัดจากภาพถ่ายดาวเทียม เพื่อเพิ่มความแม่นยำในการทำนายราคาอสังหาริมทรัพย์ในเขตกรุงเทพมหานคร
 
--ภาพถ่ายดาวเทียมจากที่ทดสอบ google earth ดึงภาพถ่ายได้เทียมแบบฟรีได้แค่ระดับ zoom 12
-ซึ่งภาพถ่ายมีความหยาบมากเกินไปจึงดัดสินใจเปรียบเป็นใช้ภาพถ่ายดาวเทียม SENTENAL 2 
-แทนซึงได้ความละเอียดของภาพอยู่ที่ 10 เมตรและมีสีภาพที่จำแนกลักษณะพื้นที่ได้ง่ายกว่า Google earth
-(วันที่ภาพถ่าย 01/12/2025)
--metadata
-    เปอร์เซ็นการปกคลุมของเมฆ
-        <CLOUDY_PIXEL_PERCENTAGE>0.001257</CLOUDY_PIXEL_PERCENTAGE>
-    มุมของดวงอาทิตย์
-        <ZENITH_ANGLE unit="deg">39.9947297534645</ZENITH_ANGLE>
-        <AZIMUTH_ANGLE unit="deg">153.230928123287</AZIMUTH_ANGLE>
-        (ซึ่งมุมของดวงอาทิตย์ทำให้เกิดเงาจากตึกสูง)
+---
+
+## 💻 System Requirements
+
+เพื่อให้ระบบสามารถประมวลผลโมเดล Deep Learning และจัดการข้อมูลเชิงพื้นที่ได้อย่างมีประสิทธิภาพ ควรมีคุณสมบัติดังนี้:
+
+### **Hardware Requirements**
+* **CPU:** Intel Core i5 / AMD Ryzen 5 ขึ้นไป (แนะนำ 6 Cores+)
+* **GPU:** NVIDIA GPU ที่รองรับ CUDA (VRAM 4GB+) สำหรับขั้นตอน Fine-tuning CNN
+* **RAM:** ขั้นต่ำ 16GB (แนะนำ 32GB สำหรับการโหลดภาพดาวเทียมจำนวนมาก)
+* **Storage:** พื้นที่ว่างอย่างน้อย 10GB สำหรับ Dataset และไฟล์โมเดล
+
+### **Software Requirements**
+* **OS:** Windows 10/11 หรือ Ubuntu 20.04+
+* **Python:** Version 3.9 หรือ 3.10
+* **CUDA & cuDNN:** เวอร์ชันที่สอดคล้องกับ TensorFlow
+
+---
+
+## 🚀 Project Overview
+โครงการนี้มุ่งเน้นการสร้าง **Urban Feature Extractor** เพื่อดึงคุณลักษณะเด่นของเมืองจากภาพถ่ายดาวเทียมมาเป็นตัวแปรในการทำนายราคา:
+
+1. **CNN Fine-Tuning**: นำ EfficientNetB0 มาฝึกฝนร่วมกับข้อมูล POI Density 14 ประเภท เพื่อสร้างโมเดลสกัดฟีเจอร์เชิงเมือง
+2. **Feature Composition**: รวมเวกเตอร์จากภาพ (ผ่าน PCA บีบอัดเหลือ 50 มิติ) เข้ากับข้อมูล Tabular และ Spatial
+3. **Price Prediction**: ใช้ LightGBM Regressor ประมวลผลเวกเตอร์รวม 115+ มิติ เพื่อทำนายราคาขาย
+
+---
+
+## 🏗️ Architecture Design
+
+
+
+### **Data Processing Pipeline**
+* **Visual Path**: `Satellite Images` ➔ `EfficientNetB0` ➔ `PCA` ➔ `50 Features`
+* **Spatial Path**: `Shapefiles` ➔ `Buffer Analysis (1km)` ➔ `POI Density` ➔ `42 Features`
+* **Tabular Path**: `Condo Specs` ➔ `Standard Scaling / One-Hot Encoding` ➔ `23 Features`
+
+---
