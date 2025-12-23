@@ -45,3 +45,5 @@
 * **Tabular Path**: `Condo Specs` ➔ `Standard Scaling / One-Hot Encoding` ➔ `23 Features`
 
 ---
+
+### Urban Feature Extractor ยังติดปัญหาไม่สามารถสกัด Feature ที่สำคัญได้ ต้องมีการนำข้อมูลประเภทอื่นๆ มาช่วยในการทำ Fine-Tuning เพิ่มเติมเพื่อเพิ่มประสิทธิภาพการทำงานของตัว Extractor ให้ดียิ่งขั้น
